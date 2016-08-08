@@ -1,31 +1,22 @@
-var keys = [];
-var nodeNames = ["INPUT", "TEXTAREA"];
+var ENTER = 8;
+var nodeNames = ['INPUT', 'TEXTAREA'];
 
-window.addEventListener("keydown",
-    function(e) {
-        keys[e.keyCode] = true;
-        if (nodeNames.includes(document.activeElement.nodeName)) {
-            return;
-        }
-        if (document.activeElement.isContentEditable) {
-            return;
-        }
+window.addEventListener('keydown', function(e) {
+    if (nodeNames.includes(document.activeElement.nodeName)) {
+        return;
+    }
+    if (document.activeElement.isContentEditable) {
+        return;
+    }
 
-        checkCombinations(e);
-    },
-    false);
-
-window.addEventListener('keyup',
-    function(e) {
-        keys[e.keyCode] = false;
-    },
-    false);
+    checkCombinations(e);
+}, false);
 
 function checkCombinations(e) {
-    if (keys[16] && keys[8]) {
+    if (e.shiftKey && e.keyCode === ENTER) {
         goForward();
         e.preventDefault();
-    } else if (keys[8] && !keys[16]) {
+    } else if (e.keyCode === ENTER) {
         goBack();
         e.preventDefault();
     }
