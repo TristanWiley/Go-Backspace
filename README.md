@@ -1,12 +1,6 @@
-# So-Chat-Commander
-Chat Commander is a client side Chrome extension that integrates commands for your use.  
+#Go Backspace for Google Chrome
+| GBS for short.
 
-So far there are three commands here
+GBS for Google Chrome, brings back the backspace (Back) functionality to your browser. Instead of having to reach down to your keyboard, to navigate a page backwards, all you have to do now is press the backspace key on your keyboard and you're set.
 
-- /collapse
-- /uncollapse
-- /giphy <Phrase/Word>
-
-So collapse and uncollapse are self-explanatory, they take any onebox chat message (Wikipedia, SO Question/Answer,  Youtube, Image, etc.)
-
-/giphy will send a Gifs to the chat according to anything you send after it.
+This extension will restore the functionality of pressing backspace to go to the previous page, and shift+backspace to go forward.
